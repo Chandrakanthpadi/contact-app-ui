@@ -1,10 +1,13 @@
+import { NavigationContainer } from "@react-navigation/native";
 import Main from "./Main";
-import { LoginProvider } from "./store/LoginContext";
+import { UserProvider } from "./store/UserContext";
 
 export default function App() {
   return (
-    <LoginProvider>
-      <Main />
-    </LoginProvider>
+    <UserProvider>
+      <NavigationContainer>
+        <Main />
+      </NavigationContainer>
+    </UserProvider>
   );
 }
