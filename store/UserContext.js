@@ -7,9 +7,9 @@ export function usePrincipalUser() {
 }
 
 export const UserProvider = ({ children }) => {
-  const [jwt, setName] = useState("");
+  const [user, setUser] = useState();
 
   return (
-    <UserContext.Provider value={{ jwt }}>{children}</UserContext.Provider>
+    <UserContext.Provider value={{ user }}>{children}</UserContext.Provider>
   );
 };

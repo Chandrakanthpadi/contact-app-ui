@@ -8,9 +8,9 @@ import WelcomeScreen from "./screens/WelcomeScreen";
 
 const Main = () => {
   const Stack = createNativeStackNavigator();
-  const { jwt } = usePrincipalUser();
+  const { user } = usePrincipalUser();
 
-  if (jwt) {
+  if (user) {
     return (
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
